@@ -1,57 +1,101 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import { ref } from "vue";
+
+const links = ref(false);
+const toggleLinks = () => {
+  links.value = !links.value;
+};
 </script>
 
 <template>
-  <nav>
+  <header>
     <div class="container">
-      <div class="wrapper">
-        <h1>logo</h1>
-        <ul class="links">
+      <RouterLink to="/">
+        <img class="logo" src="../assets/img/storeino-logo.png" alt="logo" />
+      </RouterLink>
+      <div class="links">
+        <span @click="toggleLinks" class="icon">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </span>
+        <ul v-show="links">
           <li>
-            <RouterLink to="/">Home</RouterLink>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <RouterLink to="/about">About</RouterLink>
+            <a href="#about">About</a>
           </li>
           <li>
-            <RouterLink to="/program">Program</RouterLink>
+            <a href="#program">Program</a>
           </li>
-          <button>
+          <li>
             <RouterLink to="/register">Register</RouterLink>
-          </button>
+          </li>
         </ul>
-        <button>button</button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <RouterView />
 </template>
 
 <style scoped>
-nav {
-  width: 100%;
-  background-color: white;
+header {
   padding: 20px;
 }
-/* 
-
-.wrapper {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} 
-*/
-
-@media (min-width: 720px) {}
-
-@media (min-width: 1020px) {}
-
+header .logo {
+  width: 200px;
+}
+header .links {
+  position: relative;
+}
+header .links .icon i {
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+}
+header .links .icon i:hover {
+  color: #568ffc;
+}
+header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+}
+header .links ul::before {
+  content: "";
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  right: 5px;
+  top: -20px;
+}
+/* header .links:hover ul {
+  display: block;
+} */
+header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+header .links ul li a:hover {
+  padding-left: 25px;
+}
+header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div id="home">this is Register Form</div>
+    <div id="home">this is home</div>
   </div>
 </template>
 
