@@ -11,9 +11,9 @@ const toggleLinks = () => {
 <template>
   <header>
     <div class="container">
-      <RouterLink to="/">
-        <img class="logo" src="../assets/img/storeino-logo.png" alt="logo" />
-      </RouterLink>
+      <a href="#">
+        <img class="logo" src="../assets/img/logo StoreinoLab.png" alt="logo" />
+      </a>
       <div class="links">
         <span @click="toggleLinks" class="icon">
           <i class="fa-solid fa-bars-staggered"></i>
@@ -29,14 +29,12 @@ const toggleLinks = () => {
             <a href="#program">Program</a>
           </li>
           <li>
-            <RouterLink to="/register">Register</RouterLink>
+            <a href="#register">Register</a>
           </li>
         </ul>
       </div>
     </div>
   </header>
-
-  <RouterView />
 </template>
 
 <style scoped>
