@@ -1,25 +1,13 @@
+<script setup>
+import About from "../components/About.vue";
+</script>
+
 <template>
-  <div class="container">
     <!-- About Section  -->
-    <div id="about" class="hero">
-      <div class="part">
-        <h1>
-          Storeino/lab
-          <span class="storeino">Competition de Programmation</span>
-          <span> By Storeino</span>
-        </h1>
-        <p class="part-info">
-          Storeino/lab est une compétition de programmation d’apprentissage et
-          de concurrence ,c'est une opportunité pour les étudiants passionnés
-          par la programmation afin de tester leurs capacités et découvrir les
-          nouvelles technologies dans une atmosphère créative et bénéficier d'un
-          encadrement par des professionnels dans le domaine.
-        </p>
-      </div>
-      <button class="btn-about">INSCRIVEZ-VOUS</button>
-    </div>
+    <About />
+
     <!-- address Section  -->
-    <div id="sadress" class="conntent-wrapper">
+    <!-- <div id="sadress" class="conntent-wrapper">
       <div class="contentsadress">
         <h1>À QUI S ADRESSE Storeino/lab ?</h1>
       </div>
@@ -34,15 +22,17 @@
         la thématique choisi dans le respect des délais de chaque phase du
         programme ,La participation est gratuite, il suffit de s’enregistrer.
       </p>
-    </div>
+    </div> -->
+
     <!-- prq services -->
-    <div id="prq" class="conntent-wrapper">
+    <!-- <div id="prq" class="conntent-wrapper">
       <div class="conntent-prq">
         <h3>POURQUOI PARTICIPER à Storeino/lab ?</h3>
         <p>3 RAISONS POUR PARTICIPER à cette compétition :</p>
-      </div>
-      <!-- card - prq services  -->
-      <div class="card-wrapper">
+      </div> -->
+
+    <!-- card - prq services  -->
+    <!-- <div class="card-wrapper">
         <div class="card" style="width: 18rem">
           <img class="card-img-top" src="..." alt="Card image cap" />
           <div class="card-body">
@@ -75,13 +65,11 @@
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </div> -->
 </template>
 
 <style scoped>
-.container {
+/* .container {
   padding: 20px;
 }
 
@@ -114,5 +102,5 @@
 
 .card {
   text-align: center;
-}
+} */
 </style>
