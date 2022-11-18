@@ -11,12 +11,12 @@
             <div class="imgs-wrapper">
               <img
                 class="storeino-logo desktop"
-                src="../assets/img/about-logo-desktop.svg"
+                src="../assets/img/logo decktop-01.svg"
                 alt="storeino"
               />
               <img
                 class="storeino-logo mobile"
-                src="../assets/img/about-logo-mobile.svg"
+                src="../assets/img/logo mobile-01.svg"
                 alt="storeino"
               />
             </div>
@@ -88,7 +88,8 @@
 }
 
 .storeino-logo {
-  width: 200px;
+  width: 150px;
+  padding-bottom: 15px;
 }
 
 .about-info {
@@ -109,7 +110,7 @@
 }
 
 .about-info p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   text-align: center;
   line-height: 30px;
@@ -144,8 +145,8 @@
 .apropos-section-bg {
   display: none;
 }
-
-@media (min-width: 920px) {
+/* min-width: 920 */
+@media (min-width: 1200px) {
   .container {
     position: relative;
   }
@@ -183,19 +184,20 @@
 
   .desktop {
     display: block;
+    width: 200px;
+    padding-bottom: 15px;
   }
 
   .mobile {
     display: none;
   }
-  .unique {
-    font-size: 2rem;
-    color: var(--cyanColor);
-  }
-
   .comp {
-    font-size: 2.3rem;
+    font-size: 2.8rem;
     color: var(--blueColor);
+  }
+  .unique {
+    font-size: 2.6rem;
+    color: var(--cyanColor);
   }
 
   .by {
@@ -206,7 +208,7 @@
     display: block;
     position: absolute;
     top: -130px;
-    right: 15px;
+    right: -5px;
     z-index: -999;
   }
 
@@ -228,17 +230,18 @@
     color: #fff;
   }
   .apropos-section-bg .container .wrapper-desktop {
-    width: 400px;
+    width: 450px;
+    padding: 20px 0;
   }
 
   .apropos-section-bg .container .wrapper-desktop h3 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     text-transform: uppercase;
     text-align: center;
   }
 
   .apropos-section-bg .container .wrapper-desktop p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     text-align: center;
     line-height: 30px;
