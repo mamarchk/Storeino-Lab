@@ -3,6 +3,7 @@ import About from "../components/About.vue";
 import Saddress from "../components/Saddress.vue";
 import Pourquoi from "../components/Pourquoi.vue";
 import Thematiques from "../components/Thematiques.vue";
+import Programme from "../components/Programme.vue";
 </script>
 
 <template>
@@ -17,6 +18,9 @@ import Thematiques from "../components/Thematiques.vue";
 
   <!-- thematiques -->
   <Thematiques />
+
+  <!-- programme -->
+  <Programme />
 </template>
 
 <style scoped></style>

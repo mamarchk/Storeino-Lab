@@ -145,7 +145,7 @@
 .apropos-section-bg {
   display: none;
 }
-/* min-width: 920 */
+
 @media (min-width: 1200px) {
   .container {
     position: relative;

@@ -37,7 +37,6 @@
 }
 
 .saddress-sect .desc {
-  line-height: 26px;
   font-weight: bold;
 }
 

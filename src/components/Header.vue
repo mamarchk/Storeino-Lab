@@ -16,7 +16,7 @@ const closeMobileNav = () => {
 
 const checkScreen = () => {
   windowWidth.value = window.innerWidth;
-  if (windowWidth.value <= 920) {
+  if (windowWidth.value <= 1000) {
     mobile.value = true;
     return;
   }
