@@ -11,7 +11,6 @@ const toggleMobileNav = () => {
 
 const closeMobileNav = () => {
   mobileNav.value = false;
-  console.log("done");
 };
 
 const checkScreen = () => {

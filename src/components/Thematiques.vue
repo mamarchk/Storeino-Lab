@@ -89,7 +89,7 @@
   margin-bottom: 45px;
   text-transform: uppercase;
   font-size: 2rem;
-  color: var(--cyanColor);
+  color: #fff;
 }
 
 .thematique {

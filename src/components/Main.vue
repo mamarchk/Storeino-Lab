@@ -4,6 +4,7 @@ import Saddress from "../components/Saddress.vue";
 import Pourquoi from "../components/Pourquoi.vue";
 import Thematiques from "../components/Thematiques.vue";
 import Programme from "../components/Programme.vue";
+import Formulaire from "../components/Formulaire.vue";
 </script>
 
 <template>
@@ -21,6 +22,9 @@ import Programme from "../components/Programme.vue";
 
   <!-- programme -->
   <Programme />
+
+  <!-- formulaire -->
+  <Formulaire />
 </template>
 
 <style scoped></style>

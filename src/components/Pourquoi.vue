@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="pourquoi" class="container">
     <div class="pourquoi-sect">
       <h1 class="title">POURQUOI PARTICIPER</h1>
       <p class="raisons">3 RAISONS POUR PARTICIPER à cette compétition :</p>
