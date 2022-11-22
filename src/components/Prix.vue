@@ -7,15 +7,23 @@
           <div class="stars-container">
             <div class="star">
               <img src="../assets/img/Prix/star.png" alt="star" />
-              <p>Reward 1</p>
+              <p>Le prix pour le premier groupe gagnant</p>
             </div>
             <div class="star">
               <img src="../assets/img/Prix/star.png" alt="star" />
-              <p>Reward 2</p>
+              <p>Intégration de l'application réalisée</p>
             </div>
             <div class="star">
               <img src="../assets/img/Prix/star.png" alt="star" />
-              <p>Reward 3</p>
+              <p>
+                Vidéo promotionnelle pour promouvoir l'application sur nos
+                canaux, la partager avec nos clients et la mettre en Dashboard
+                interne de la plateforme Storeino
+              </p>
+            </div>
+            <div class="star">
+              <img src="../assets/img/Prix/star.png" alt="star" />
+              <p>Intégration de libellé recommandé pour l'application</p>
             </div>
           </div>
           <img
@@ -60,6 +68,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  text-align: left;
 }
 
 .star img {
