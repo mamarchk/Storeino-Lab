@@ -59,6 +59,11 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
+  transition: 0.3s ease all;
+}
+
+.links li a:hover {
+  border-bottom: 1px #fdfdfd solid;
 }
 
 .img-container {

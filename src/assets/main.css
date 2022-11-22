@@ -5,9 +5,9 @@
   --cyanColor: #33ccfc;
 }
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 body {
   -webkit-box-sizing: border-box;

@@ -8,33 +8,35 @@
             <img src="../assets/img/programme/Star.png" alt="star" />
             <p>
               l’inscription à la compétition du 24 novembre jusqu’au 30 novembre
+              2022
             </p>
           </div>
           <div class="star">
             <img src="../assets/img/programme/Star.png" alt="star" />
             <p>
               la présélection des candidats du 01 décembre jusqu'au 31 décembre
+              2022
             </p>
           </div>
           <div class="star">
             <img src="../assets/img/programme/Star.png" alt="star" />
             <p>
               la formation sur marketplace STOREINO et les thématiques du 2
-              janvier jusqu'au 8 janvier
+              janvier jusqu'au 8 janvier 2022
             </p>
           </div>
           <div class="star">
             <img src="../assets/img/programme/Star.png" alt="star" />
             <p>
               la répartition des groupes et thématiques du 9 janvier jusqu’au 15
-              janvier
+              janvier 2022
             </p>
           </div>
           <div class="star">
             <img src="../assets/img/programme/Star.png" alt="star" />
             <p>
               le suivi du 16 janvier jusqu’au 16 mars Announcement des résultats
-              le 17 mars
+              le 17 mars 2022
             </p>
           </div>
         </div>

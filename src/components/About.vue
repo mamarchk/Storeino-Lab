@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div id="a-propos" class="about">
+    <div class="about">
       <div class="wrapper-wrapper">
         <div class="wrapper">
           <h1>
@@ -25,7 +25,9 @@
           <div class="bg-img">
             <img src="../assets/img/Mask group.png" alt="" />
           </div>
-          <button class="about-btn">INSCRIVEZ-VOUS</button>
+
+          <a href="#inscrivez-vous" class="about-btn">INSCRIVEZ-VOUS</a>
+          <div class="aprp" id="a-propos"></div>
           <div class="about-info">
             <h3>à PROPOS</h3>
             <p>
@@ -62,6 +64,10 @@
 .about {
   margin-top: 60px;
   text-align: center;
+}
+
+.aprp {
+  margin-top: 20px;
 }
 
 .about h1 {
@@ -117,16 +123,18 @@
 }
 
 .about-btn {
-  margin-bottom: 20px;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
   border: none;
   color: #fff;
-  font-size: 0.8;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  text-decoration: none;
   cursor: pointer;
   background-color: var(--cyanColor);
-  padding: 20px 40px;
+  padding: 15px 20px;
   border-radius: 30px;
+  font-size: 14px;
   transition: 0.5s ease all;
 }
 
@@ -195,6 +203,7 @@
     font-size: 2.8rem;
     color: var(--blueColor);
   }
+
   .unique {
     font-size: 2.6rem;
     color: var(--cyanColor);
@@ -249,6 +258,10 @@
 
   .apropos-section-bg .container img {
     width: 300px;
+  }
+
+  .storeino-logo.desktop {
+    margin-bottom: 20px;
   }
 }
 </style>
