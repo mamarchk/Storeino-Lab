@@ -11,19 +11,19 @@
             <div class="imgs-wrapper">
               <img
                 class="storeino-logo desktop"
-                src="../assets/img/logo decktop-01.svg"
+                src="../assets/img/logo-desktop-01.svg"
                 alt="storeino"
               />
               <img
                 class="storeino-logo mobile"
-                src="../assets/img/logo mobile-01.svg"
+                src="../assets/img/logo-mobile-01.svg"
                 alt="storeino"
               />
             </div>
           </h1>
 
           <div class="bg-img">
-            <img src="../assets/img/Mask group.png" alt="" />
+            <img src="../assets/img/Mask-group.png" alt="" />
           </div>
 
           <a href="#inscrivez-vous" class="about-btn">INSCRIVEZ-VOUS</a>
