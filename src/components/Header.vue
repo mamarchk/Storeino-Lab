@@ -35,7 +35,7 @@ onMounted(() => {
       <nav>
         <div class="branding">
           <a href="#"
-            ><img src="../assets/img/logo StoreinoLab.png" alt="logo"
+            ><img src="../assets/img/logo-StoreinoLab.png" alt="logo"
           /></a>
         </div>
         <ul v-show="!mobile" class="navigation">
