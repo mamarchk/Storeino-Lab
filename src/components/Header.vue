@@ -34,7 +34,9 @@ onMounted(() => {
     <div class="container">
       <nav>
         <div class="branding">
-          <img src="../assets/img/logo StoreinoLab.png" alt="logo" />
+          <a href="#"
+            ><img src="../assets/img/logo StoreinoLab.png" alt="logo"
+          /></a>
         </div>
         <ul v-show="!mobile" class="navigation">
           <li>
@@ -193,6 +195,7 @@ header nav .branding img {
   max-width: 200px;
   height: 100%;
   background: gray;
+  z-index: 999;
   top: 0;
   left: 0;
 }

@@ -18,15 +18,20 @@
           <a href="#programme">le programme de la compétition </a>
         </li>
         <li>
+          <a href="#prix">les Prix de la compétition </a>
+        </li>
+        <li>
           <a href="#inscrivez-vous">INSCRIVEZ-VOUS </a>
         </li>
       </ul>
       <div class="img-container">
-        <img
-          class="storeino-lab"
-          src="../assets/img/Frame.png"
-          alt="storeino\lab"
-        />
+        <a href="#">
+          <img
+            class="storeino-lab"
+            src="../assets/img/Frame.png"
+            alt="storeino\lab"
+          />
+        </a>
       </div>
     </div>
   </div>

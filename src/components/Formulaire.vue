@@ -11,63 +11,15 @@ const age = ref("");
 const niveauScolaire = ref("");
 const etablissement = ref("");
 
-const tempLangage = ref("");
-const langageMaitrise = ref([]);
-
-const tempTechStack = ref("");
-const techStack = ref([]);
-
+const langageMaitrise = ref("");
+const techStack = ref("");
 const specialite = ref([]);
-
-const tempSkill = ref("");
-const softSkills = ref([]);
+const softSkills = ref("");
 
 const formErrors = ref([]);
 const maxChars = ref(15);
 const errDiv = ref(null);
 const form = ref(null);
-
-function addSoftSkill() {
-  if (tempSkill.value) {
-    if (!softSkills.value.includes(tempSkill.value)) {
-      softSkills.value.push(tempSkill.value);
-    }
-    tempSkill.value = "";
-  }
-}
-function deleteSoftSkill(skill) {
-  softSkills.value = softSkills.value.filter((el) => {
-    return skill !== el;
-  });
-}
-
-function addLangageMaitrise() {
-  if (tempLangage.value) {
-    if (!langageMaitrise.value.includes(tempLangage.value)) {
-      langageMaitrise.value.push(tempLangage.value);
-    }
-    tempLangage.value = "";
-  }
-}
-function deleteLangageMaitrise(langage) {
-  langageMaitrise.value = langageMaitrise.value.filter((el) => {
-    return langage !== el;
-  });
-}
-
-function addTechStack() {
-  if (tempTechStack.value) {
-    if (!techStack.value.includes(tempTechStack.value)) {
-      techStack.value.push(tempTechStack.value);
-    }
-    tempTechStack.value = "";
-  }
-}
-function deleteTechStack(tech) {
-  techStack.value = techStack.value.filter((el) => {
-    return tech !== el;
-  });
-}
 
 const validateForm = () => {
   formErrors.value = [];
@@ -94,7 +46,7 @@ const validateForm = () => {
     formErrors.value.push("Année Scolaire field cant be empty");
   } else if (!etablissement.value) {
     formErrors.value.push("Etablissement field cant be empty");
-  } else if (!langageMaitrise.value.length) {
+  } else if (!langageMaitrise.value) {
     formErrors.value.push("Langage maîtrisée field cant be empty");
   } else if (!techStack.value.length) {
     formErrors.value.push("Tech stack maîtrisée field cant be empty");
@@ -257,6 +209,7 @@ function sendEmail() {
                 id="anne-scolaire"
                 v-model="niveauScolaire"
               >
+                <option disabled value="">choisir votre Niveau Scolaire</option>
                 <option value="L1">L1</option>
                 <option value="L2">L2</option>
                 <option value="L3">L3</option>
@@ -265,20 +218,25 @@ function sendEmail() {
               </select>
             </div>
 
-            <!-- copy of niveau scolaire -->
-            <div class="niveau-scolaire sect">
-              <label for="niveau-scolaire" class="req">Etablissement</label>
+            <!-- ÉTABLISSEMENTS -->
+            <div class="etablissements sect">
+              <label for="etablissements" class="req">Etablissement</label>
               <select
-                class="annee-inp"
+                class="etablissement-inp"
                 name="etablissement"
-                id="anne-scolaire"
+                id="etablissements"
                 v-model="etablissement"
               >
-                <option value="L1">L1</option>
-                <option value="L2">L2</option>
-                <option value="L3">L3</option>
-                <option value="M1">M1</option>
-                <option value="M2">M2</option>
+                <option disabled value="">choisir votre etablissement</option>
+                <option value="FSSM">FSSM</option>
+                <option value="FSJES">FSJES</option>
+                <option value="FSJES">FSJES</option>
+                <option value="ENCG">ENCG</option>
+                <option value="FMPM">FMPM</option>
+                <option value="FLSHM">FLSHM</option>
+                <option value="FSTG">FSTG</option>
+                <option value="ESTK">ESTK</option>
+                <option value="Autres">Autres</option>
               </select>
             </div>
           </div>
@@ -290,32 +248,38 @@ function sendEmail() {
               <label for="langage" class="label-title req"
                 >Langage maîtrisée</label
               >
-              <div class="langage-inp-container">
-                <input
-                  v-model.trim="tempLangage"
-                  name="langage_maitraise"
-                  type="text"
-                  id="langage"
-                  placeholder="Langage maîtrisée"
-                />
-                <input
-                  @click="addLangageMaitrise"
-                  type="button"
-                  class="btn-add"
-                  value="add"
-                />
-              </div>
-              <div class="pill-container">
-                <div
-                  v-for="(langage, index) in langageMaitrise"
-                  :key="index"
-                  class="pill"
-                >
-                  <span @click="deleteLangageMaitrise(langage)">
-                    {{ langage }}
-                  </span>
-                </div>
-              </div>
+
+              <select
+                class="langage-inp"
+                name="langage_maitraise"
+                id="langage"
+                v-model.trim="langageMaitrise"
+              >
+                <option disabled value="">
+                  choisir votre Langage maîtrisée
+                </option>
+                <option value="Javascript">Javascript</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="C#">C#</option>
+                <option value="PHP">PHP</option>
+                <option value="Java">Java</option>
+                <option value=".Net">.Net</option>
+                <option value="VBA">VBA</option>
+                <option value="HTML/CSS">HTML/CSS</option>
+                <option value="Python">Python</option>
+                <option value="TypeScript">TypeScript</option>
+                <option value="Go">Go</option>
+                <option value="Rust">Rust</option>
+                <option value="Kotlin">Kotlin</option>
+                <option value="Dart">Dart</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Oracle">Oracle</option>
+                <option value="Bash/Shell">Bash/Shell</option>
+                <option value="Swift">Swift</option>
+                <option value="Perl">Perl</option>
+                <option value="Autres">Autres</option>
+              </select>
             </div>
 
             <!-- Tech stack maîtrisée -->
@@ -323,31 +287,40 @@ function sendEmail() {
               <label for="stack" class="label-title req"
                 >Tech stack maîtrisée</label
               >
-
-              <div class="techstack-inp-container">
-                <input
-                  v-model.trim="tempTechStack"
-                  name="tech_stack"
-                  type="text"
-                  id="stack"
-                  placeholder="Tech stack maîtrisée"
-                />
-                <input
-                  @click="addTechStack"
-                  type="button"
-                  class="btn-add"
-                  value="add"
-                />
-              </div>
-              <div class="pill-container">
-                <div
-                  v-for="(tech, index) in techStack"
-                  :key="index"
-                  class="pill"
-                >
-                  <span @click="deleteTechStack(tech)"> {{ tech }} </span>
-                </div>
-              </div>
+              <select
+                class="techstack-inp"
+                name="tech_stack"
+                id="stack"
+                v-model="techStack"
+              >
+                <option disabled value="">
+                  choisir votre Tech Stack Maitrisée
+                </option>
+                <option value="Vue.js">Vue.js</option>
+                <option value="React.js">React.js</option>
+                <option value="Svelte">Svelte</option>
+                <option value="Angular">Angular</option>
+                <option value="jQuery">jQuery</option>
+                <option value="Node.js">Node.js</option>
+                <option value="Express.js">Express.js</option>
+                <option value="MongoDB">MongoDB</option>
+                <option value="Laravel">Laravel</option>
+                <option value="Symfony">Symfony</option>
+                <option value="CodeIgniter">CodeIgniter</option>
+                <option value="Django">Django</option>
+                <option value="Flutter">Flutter</option>
+                <option value="Spring">Spring</option>
+                <option value="TailwindCss">TailwindCss</option>
+                <option value="Bootstrap">Bootstrap</option>
+                <option value="Ruby on Rails">Ruby on Rails</option>
+                <option value="Flutter for Web">Flutter for Web</option>
+                <option value="LAMP STACK">LAMP STACK</option>
+                <option value="MEAN STACK">MEAN STACK</option>
+                <option value="MERN STACK">MERN STACK</option>
+                <option value="MEVN STACK">MEVN STACK</option>
+                <option value="JAMSTACK">JAMSTACK</option>
+                <option value="Autres">Autres</option>
+              </select>
             </div>
 
             <!-- Spécialité -->
@@ -394,33 +367,19 @@ function sendEmail() {
             <!-- soft skills -->
             <div class="soft-skills sect">
               <label for="soft-skills" class="label-title">Soft Skills</label>
-              <div class="skills-inp-container">
-                <input
-                  v-model.trim="tempSkill"
-                  name="soft_skills"
-                  type="text"
-                  id="soft-skills"
-                  placeholder="ex: Probleme-Solving, self-learning, ..."
-                />
-                <input
-                  @click="addSoftSkill"
-                  type="button"
-                  class="btn-add"
-                  value="add"
-                />
-              </div>
-              <div class="pill-container">
-                <div
-                  v-for="(skill, index) in softSkills"
-                  :key="index"
-                  class="pill"
-                >
-                  <span @click="deleteSoftSkill(skill)"> {{ skill }} </span>
-                </div>
-              </div>
+              <textarea
+                v-model.trim="softSkills"
+                name="soft_skills"
+                class="softskills-inp"
+                placeholder="exemple: Problem-Solving, Time-Management, ..."
+                id="soft-skills"
+                cols="30"
+                rows="10"
+              ></textarea>
             </div>
           </div>
         </div>
+
         <div class="btn-container">
           <input class="btn" type="submit" value="s'inscrire" />
         </div>
@@ -506,27 +465,25 @@ input {
   gap: 15px;
 }
 
-/* age + annne-scolaire  */
-.age-inp,
-.annee-inp {
-  margin: 0 15px;
-  font-weight: bold;
-}
-
 /* age-input */
 .age-inp {
   text-align: center;
   width: 60px;
+  margin: 0 10px;
 }
 
-/* niveau-scolaire */
-.annee-inp {
+/* niveau-scolaire + etablissement + langage + techstack + softskills */
+.techstack-inp,
+.langage-inp,
+.annee-inp,
+.etablissement-inp {
   background: #eee;
   color: var(--blueColor);
   font-size: 14px;
   border: none;
   border-radius: 5px;
   padding: 8px;
+  width: 100%;
 }
 
 /* specialite */
@@ -537,7 +494,7 @@ input {
 }
 
 /* soft skills */
-.soft-skills-inp {
+.softskills-inp {
   background: #eee;
   border: none;
   min-height: 100px;
@@ -585,49 +542,6 @@ input {
   margin-bottom: 20px;
 }
 
-.pill {
-  background: #eee;
-  color: var(--blueColor);
-  font-size: 12px;
-  padding: 5px 10px;
-  border-radius: 19px;
-  margin-top: 5px;
-  display: inline-block;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: 0.3s ease all;
-}
-.pill:hover {
-  background: #cdcdcd;
-  color: red;
-}
-
-.skills-inp-container,
-.langage-inp-container,
-.techstack-inp-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.skills-inp-container input,
-.langage-inp-container input,
-.techstack-inp-container input {
-  width: 85%;
-  border-radius: 5px 0 0 5px;
-}
-.skills-inp-container .btn-add,
-.langage-inp-container .btn-add,
-.techstack-inp-container .btn-add {
-  width: 20%;
-  border: none;
-  background-color: var(--cyanColor);
-  color: #fff;
-  font-size: 12px;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 0 5px 5px 0;
-}
-
 @media (min-width: 920px) {
   .formulaire-sect {
     max-width: 100%;
@@ -641,9 +555,6 @@ input {
     font-size: 20px;
     margin-bottom: 40px;
   }
-  /* .sect {
-    width: 45%;
-  } */
 
   .info-perso,
   .info-tech {
