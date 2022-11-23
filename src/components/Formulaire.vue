@@ -393,6 +393,14 @@ function sendEmail() {
   margin-top: 100px;
 }
 
+.form-group {
+  background: #eee6;
+  padding-top: 32px;
+  padding-bottom: 20px;
+  border-radius: 17px;
+  margin-bottom: 16px;
+}
+
 .formulaire-sect {
   text-align: left;
   width: 100%;

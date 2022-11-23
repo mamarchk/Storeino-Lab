@@ -3,12 +3,9 @@
     <div class="container">
       <div id="prix" class="prix-sect">
         <h1>les Prix de la compétition</h1>
+        <p class="desc">Le prix pour le premier groupe gagnant :</p>
         <div class="prix-content">
           <div class="stars-container">
-            <div class="star">
-              <img src="../assets/img/Prix/star.png" alt="star" />
-              <p>Le prix pour le premier groupe gagnant</p>
-            </div>
             <div class="star">
               <img src="../assets/img/Prix/star.png" alt="star" />
               <p>Intégration de l'application réalisée</p>
@@ -61,7 +58,13 @@
   font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-size: 17px;
+  font-weight: 300;
+  margin-bottom: 30px;
 }
 
 .star {
@@ -104,6 +107,12 @@
 
   .prix-sect h1 {
     font-size: 2.6rem;
+  }
+
+  .desc {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 35px;
   }
 
   .star {
